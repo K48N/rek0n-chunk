@@ -1,0 +1,28 @@
+[package]
+name = "rek0n-chunk"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.86"
+authors = ["kon"]
+description = "Shared semantic chunk types for the rek0n parser and embed pipeline"
+readme = "README.md"
+license = "MIT"
+repository = "https://github.com/K48N/rek0n-chunk"
+homepage = "https://github.com/K48N/rek0n-chunk"
+keywords = ["rag", "code-chunking", "rek0n"]
+categories = ["data-structures"]
+exclude = ["/target"]
+
+[features]
+default = ["serde"]
+serde = ["dep:serde"]
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"], optional = true }
+thiserror = "1.0"
+
+[dev-dependencies]
+serde_json = "1.0"
+
+[package.metadata.docs.rs]
+all-features = true
