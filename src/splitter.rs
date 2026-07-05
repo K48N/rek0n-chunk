@@ -74,7 +74,7 @@ impl SemanticSplitter {
                 window_start = index;
                 buffer = (*line).to_string();
             } else if candidate.len() > max_chars {
-                for piece in split_oversized_line(*line, max_chars) {
+                for piece in split_oversized_line(line, max_chars) {
                     sub_chunks.push(make_sub_chunk(chunk, &piece, index, index));
                 }
                 window_start = index + 1;
