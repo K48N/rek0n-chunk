@@ -66,7 +66,12 @@ impl IndexedChunk {
             return Err(ChunkError::HasSyntaxErrors);
         }
         Ok(Self::from_parser_parts(
-            file_path, parser_kind, name, text, start_line, end_line,
+            file_path,
+            parser_kind,
+            name,
+            text,
+            start_line,
+            end_line,
         ))
     }
 
