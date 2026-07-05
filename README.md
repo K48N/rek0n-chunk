@@ -1,6 +1,6 @@
 # rek0n-chunk
 
-Part of [rek0n](https://github.com/K48N/rek0n). Shared chunk types between the parser and embed crates.
+Shared chunk types between the parser and embed crates.
 
 ## Overview
 
@@ -26,7 +26,7 @@ Part of [rek0n](https://github.com/K48N/rek0n). Shared chunk types between the p
 
 **Path belongs at index time.** The parser reads a buffer; the caller knows which file was parsed.
 
-**Small dependency surface.** Optional serde only. No tree-sitter, Candle, or LanceDB.
+**Small dependency surface.** Optional serde only. No tree-sitter, Candle, or vector database.
 
 ## Usage
 
