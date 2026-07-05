@@ -35,9 +35,7 @@ impl SemanticSplitter {
     }
 
     pub fn estimate_tokens(&self, text: &str) -> usize {
-        text.len()
-            .div_ceil(CHARS_PER_TOKEN_ESTIMATE)
-            .max(1)
+        text.len().div_ceil(CHARS_PER_TOKEN_ESTIMATE).max(1)
     }
 
     pub fn max_chars(&self) -> usize {
@@ -95,9 +93,9 @@ impl SemanticSplitter {
             ));
         }
 
-        debug_assert!(sub_chunks.iter().all(|sub| {
-            self.estimate_tokens(&sub.text) <= self.max_tokens
-        }));
+        debug_assert!(sub_chunks
+            .iter()
+            .all(|sub| { self.estimate_tokens(&sub.text) <= self.max_tokens }));
 
         Ok(sub_chunks)
     }
