@@ -9,6 +9,7 @@ mod indexed;
 mod kind;
 mod limits;
 mod parsed;
+mod splitter;
 
 pub use error::ChunkError;
 pub use indexed::IndexedChunk;
@@ -17,3 +18,4 @@ pub use limits::{
     validate_file_path, validate_input_text_length, MAX_FILE_PATH_LEN, MAX_INPUT_TEXT_LEN,
 };
 pub use parsed::ParsedChunk;
+pub use splitter::{SemanticSplitter, DEFAULT_MAX_TRANSFORMER_TOKENS};
